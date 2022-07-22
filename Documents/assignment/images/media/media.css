@@ -1,0 +1,85 @@
+/* body{
+    background-color: green;
+} */
+
+#products{
+    width: 100%;
+    margin: 0px auto;
+    justify-content: space-between;
+    display: flex;
+}
+#products .prod{
+    width: 50%;
+    background-color: blueviolet;
+}
+
+
+@media only screen and (min-width: 576px) {
+    body {
+      background-color: rgb(248, 66, 191);
+    }
+}
+  @media only screen and (min-width: 567px) and (max-width: 768px) {
+      #products{
+        width: 100%;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        display: flex;
+    }
+    #products .prod{
+        width: 50%;
+        background-color: rgb(65, 241, 62);
+    }
+    
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    #products{
+      width: 100%;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      display: flex;
+  }
+  #products .prod{
+      width: 50%;
+      background-color: rgb(1, 17, 1);
+  }
+  
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #products{
+      width: 100%;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      display: flex;
+  }
+  #products .prod{
+      width: 50%;
+      background-color: rgb(237, 60, 16);
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    #products{
+      width: 100%;
+      flex-wrap: wrap;
+      /* justify-content: space-between; */
+      display: flex;
+  }
+  #products .prod{
+      width: 50%;
+      background-color: rgb(65, 241, 62);
+  }
+  
+}
+
+  /* /* @media only screen and (min-width: 768px) {
+    body {
+      background-color: rgb(42, 241, 31);
+    }
+  } */
+
+  
+  
