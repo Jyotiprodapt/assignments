@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +17,23 @@
             <label>Name*</label><br>
             <div id="f1">
                 <div id="fn">
-                    <input type="text" id="fname" placeholder="First" required/>
+                    <input type="text" id="fname" placeholder="First"/>
                 </div>
                 <div id="ln">
-                    <input type="text" id="lname" placeholder="Last" required/>
+                    <input type="text" id="lname" placeholder="Last" />
                 </div>
             </div> 
         </div>
         <div id="phone_number">
-            <label>Phone*</label><br>
+            <label>Phone</label><br>
             <div id="pn">
-                <input type="number" id="phone" maxlength="10" placeholder="### ### ###" required/>
+                <input type="number" id="phone" maxlength="10" placeholder="### ### ###"/>
             </div>  
         </div>
         <div id="emailid">
             <label>Email*</label><br>
             <div id="ei">
-                <input type="text" id="email" placeholder="name@ex.com" required/>
+                <input type="text" id="email" placeholder="name@ex.com"/>
             </div>
         </div>
         <br>
@@ -47,13 +46,13 @@
         <div id="date_of_birth">
             <label>Date of Birth*</label><br>
             <div id="db">
-                <input type="date" id="dob" required/>
+                <input type="date" id="dob" />
             </div>
         </div>
         <div id="date_of_appointment">
             <label>Date of Appointment*</label><br>
             <div id="da">
-                <input type="date" id="doa" required/>
+                <input type="date" id="doa" />
             </div>
         </div>
         <br>
@@ -65,18 +64,19 @@
         <div id="time_of_appointment">
             <label>Time of Appointment</label><br>
             <div id="ti">
-                <input type="time" id="toa" required/>
+                <input type="time" id="toa" />
             </div>
         </div>
         <div id="select_doctor">
             <label for="doctor">Select Doctor</label><br>
             <div id="selection">
                 <select name="doctor" id="doctor">
-                    <option value="MD">Dr Avinash</option>
-                    <option value="FH">Dr Sinha</option>
-                    <option value="KL">Dr Umer</option>
-                    <option value="WP">Dr Rajni</option>
-                    <option value="TT">Dr Sneha</option>
+                    <option value="default" selected disabled hidden>Select an Option</option>
+                    <option value="MD">MD</option>
+                    <option value="FH">FH</option>
+                    <option value="KL">KL</option>
+                    <option value="WP">WP</option>
+                    <option value="TT">TT</option>
                 </select>
             </div>
         </div>
@@ -86,7 +86,7 @@
         <br>
         <br>
         <br>
-        <div id="firstquestion">
+        <div id="question1">
             <p>Do you require dental surgery?</p>
             <div id="q1y">
                 <input type="radio" id="yes1" name="q1" value="Yes"/>
@@ -97,7 +97,7 @@
                 <label for="no1">No</label>
             </div>  
         </div>
-        <div id="secondquestion">
+        <div id="question2">
             <p>Have you visited our dental clinic before?</p>
             <div id="q2y">
                 <input type="radio" id="yes2" name="q2" value="Yes"/>
@@ -108,7 +108,7 @@
                 <label for="no2">No</label>
             </div>   
         </div>
-        <div id="thirdquestion">
+        <div id="question3">
             <p>Have you experienced dental illness/surgeries in the past?</p>
             <div id="q3y">
                 <input type="radio" id="yes3" name="q3" value="Yes"/>
@@ -119,12 +119,13 @@
                 <label for="no3">No</label>
             </div>
         </div>
-        <div id="formsub">
-            <input type="submit" id="submit"/>
+        <small></small>
+        <div id="sub">
+            <input type="submit" id="submitform" placeholder="Submit" value="Submit"/>
         </div>
         
     </form>
 </body>
-<link href="./form.css" rel="stylesheet"/>
-<script src="./form2.js"></script>
+<link href="./css/form.css" rel="stylesheet"/>
+<script src="./js/form3.js"></script>
 </html>

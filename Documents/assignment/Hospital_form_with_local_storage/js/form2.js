@@ -1,3 +1,14 @@
+// const form = document.getElementById('appointment_form').elements;
+
+// for(var i=0;i<form.length;i++)
+// {
+//     form[i].addEventListener("blur",function(e){
+//         e.preventDefault();
+//         var inputValue = document.getElementById(form[i]).value;
+//         console.log(inputValue);
+//     })
+// }
+
 var today = new Date();
 var dd = today.getDate() ;
 var mm = today.getMonth() + 1;
@@ -60,3 +71,48 @@ yes1.addEventListener("change",function(e){
     localStorage.setItem("yes1",yes1);
 })
 
+
+//getting items from local storage
+if(localStorage.length > 0)
+{
+    for(let field of all)
+    {
+        field.value = localStorage.getItem(field.id);
+    }
+}
+
+//form validation
+
+function showMessage(input, message, type) {
+	// update the class for the input
+    input.setAttribute("placeholder",message);
+    // alert(message);
+	input.className = type ? "success" : "error";
+	return type;
+}
+
+function showError(input, message) {
+	return showMessage(input, message, false);
+}
+
+function hasValue(input, message) {
+	if (input.value.trim() === "") {
+		return showError(input, message);
+	}
+	return true;
+}
+
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+    let fname = hasValue(form.elements["fname"],"Enter First Name");
+    let lname = hasValue(form.elements["lname"],"Enter last Name");
+    let email = hasValue(form.elements["email"],"Enter Email");
+    let dob = hasValue(form.elements["dob"],"Enter Date of Birth");
+    let doa = hasValue(form.elements["doa"],"Enter Date of Appointment");
+    if(fname && lname && email && dob && doa)
+    {
+        localStorage.clear();
+        location.reload();
+    }
+    
+});
